@@ -1,6 +1,6 @@
 const joinNames = (namesObj) => {
     // here I'm using the optional index and source array parameters
-    const resultsArr = namesObj.reduce((accName, currVal, idx, srcArr) => {
+    const result = namesObj.reduce((accName, currVal, idx, srcArr) => {
         // if first item in array which starts with space:
         if(accName === ''){
             return accName + currVal.name;
@@ -13,7 +13,7 @@ const joinNames = (namesObj) => {
     },'');
 
     // return the result array as a string with String constructor
-    return String(resultsArr);
+    return result;
 }
 
 module.exports = joinNames;

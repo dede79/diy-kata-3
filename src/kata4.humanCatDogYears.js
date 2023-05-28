@@ -1,6 +1,4 @@
-const humanCatDogYears = (number) => {
-    // human age input
-    const humanYears = number;
+const humanCatDogYears = (humanYears) => {
 
     // First and second year for cat and dog;
     const catDogFirstSecondYear = 15 + 9;
@@ -18,13 +16,13 @@ const humanCatDogYears = (number) => {
     if(humanYears === 0){
         totalCatYears = 0;
         totalDogYears = 0;
-        return [number,totalCatYears,totalDogYears];
+        return [humanYears,totalCatYears,totalDogYears];
     } else if(humanYears < 0) {
         return ['Please enter a positive number'];
     } else {
         totalCatYears = catDogFirstSecondYear + catOtherYears;
         totalDogYears = catDogFirstSecondYear + dogOtherYears;
-        return [number,totalCatYears,totalDogYears]
+        return [humanYears,totalCatYears,totalDogYears]
     }
 };
 

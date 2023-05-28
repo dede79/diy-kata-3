@@ -1,13 +1,19 @@
 const fizzBuzz = (number) => {
-    if (number % 3){
-        return "Fizz"
-    }
-    if(number % 5){
-        return "Buzz"
-    }
-    if (number % 3 && number % 5){
+    const divisibleBy3 = number % 3 === 0;
+    const divisibleBy5 = number % 5 === 0;
+
+    if (divisibleBy3 && divisibleBy5){
         return "FizzBuzz"
     }
+
+    if (divisibleBy3) {
+        return "Fizz"
+    }
+
+    if(divisibleBy5) {
+        return "Buzz"
+    }
+
     return number;
 };
 
